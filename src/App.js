@@ -4,6 +4,11 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 
+
+
+
+
+
 const App = () => {
   return (
     <>
@@ -13,6 +18,7 @@ const App = () => {
           <div className='container'>
             <Switch>
               <Route exact path='/' component={Home} />
+
             </Switch>
           </div>
         </div>
