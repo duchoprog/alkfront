@@ -1,7 +1,7 @@
 .home{
   text-align: center;
   border: 3px solid #aaa;
-  padding: 50px 0;
+  padding: 0;
   margin-top: 100px;
 }
 
@@ -49,8 +49,8 @@ img {
   z-index: 1;
   width: 100%;
   opacity: 0.9;
-  margin-bottom: 3rem;
-  background-color: #888;
+  margin-bottom: 0;
+  background-color: #666;
   color: #fff;
 }
 .navbar ul {
@@ -63,4 +63,14 @@ img {
 }
 .navbar a:hover {
   color: var(--nav-a-hov-color);
+}
+
+table{
+  width:100%;
+  border:1px solid
+}
+ th{
+  
+  background-color: #666;
+  color: #fff;
 }

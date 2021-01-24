@@ -1,7 +1,7 @@
 import React from 'react';
 const Op = (props) => {
     return (
-        <tr className='op'>
+        <tr className='op' key={props.id}>
             <td>{props.categoria}</td>
             <td>{props.concepto}</td>
             <td>{props.monto}</td>
