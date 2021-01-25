@@ -9,7 +9,7 @@ const Navbar = ({ title }) => {
             </h1>
             <ul>
                 <li>
-                    <Link to=''>Operar</Link>
+                    <Link to='/newop'>Operar</Link>
                 </li>
                 <li>
                     <Link to='/'>Home</Link>
