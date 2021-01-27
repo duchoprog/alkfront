@@ -4,8 +4,8 @@ const OpList = ({ myOps }) => {
     return (
         <table>
             <tbody>
-                <tr>
-                    <th>Categoría</th>
+                <tr id="tableHeaders">
+                    <th id="buttons" >Modificar</th>
                     <th>Concepto</th>
                     <th>Monto</th>
                     <th>Fecha</th>
