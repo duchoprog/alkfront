@@ -13,9 +13,8 @@ const OpList = ({ myOps }) => {
                 </tr>
 
                 {myOps.map(op => (
-
+                    
                     <Op key={op.id}
-                        categoria={op.categoria}
                         concepto={op.concepto}
                         monto={op.monto}
                         fecha={op.fecha}
