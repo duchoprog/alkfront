@@ -1,5 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom'
+import axios from 'axios'
 
 const Op = (props) => {
     let history = useHistory();
@@ -11,6 +12,21 @@ const Op = (props) => {
         history.push("/Update");
     }
     function handleDelete(e) {
+
+        axios({
+            "method": "POST",
+            "url": "http://localhost:4000/delete",
+            "data": { id: props.id }
+
+        })
+            .then((response) => {
+                console.log("exito")
+                history.push("/Home");
+
+            })
+            .catch((error) => {
+                console.log("CATCH = ", error.response)
+            });
 
     }
 
