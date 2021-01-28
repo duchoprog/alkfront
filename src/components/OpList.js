@@ -29,7 +29,7 @@ const OpList = ({ myOps }) => {
 
                     {myOps.slice(1, 11).map(op => (
 
-                        <Op key={op.id}
+                        <Op id={op.id}
                             concepto={op.concepto}
                             monto={op.monto}
                             fecha={op.fecha}

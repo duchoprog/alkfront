@@ -4,12 +4,14 @@ import './App.css';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import NewOp from './components/NewOp'
+import Update from './components/Update'
 
 
 
 
 
 const App = () => {
+  sessionStorage.setItem("toBeUpdated", {})
   return (
     <>
       <Router>
@@ -19,6 +21,7 @@ const App = () => {
             <Switch>
               <Route exact path='/' component={Home} />
               <Route exact path='/newop' component={NewOp} />
+              <Route exact path='/update' component={Update} />
 
             </Switch>
           </div>
