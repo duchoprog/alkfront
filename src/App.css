@@ -66,6 +66,7 @@ img {
 table {
   width: 100%;
   border: 1px solid;
+  
 }
 th {
   background-color: #666;
@@ -90,4 +91,6 @@ button {
   margin: 0.1em;
 }
 
+
+  
 

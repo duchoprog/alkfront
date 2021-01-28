@@ -3,7 +3,6 @@ import OpList from './OpList'
 import axios from 'axios'
 
 
-
 const Home = () => {
 
     let [responseData, setResponseData] = useState('');
@@ -16,6 +15,7 @@ const Home = () => {
         })
             .then((response) => {
                 setResponseData(response.data)
+
             })
             .catch((error) => {
                 console.log(error)
@@ -23,16 +23,10 @@ const Home = () => {
 
     }, [])
 
-
-
-
-
-
     return (
         <div className='home'>
             <h1>Gastos-Ingresos</h1>
-            <h2>Saldo actual</h2>
-            <h2>Últimos 10 movimientos</h2>
+
             <div>
                 {/* { JSON.stringify(responseData)} */}
             </div>
