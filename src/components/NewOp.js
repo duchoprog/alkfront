@@ -20,16 +20,24 @@ const NewOp = () => {
 
     const handleSubmit = e => {
         e.preventDefault()
-        console.log(op)
+        //Form checks
+        if (!op.concepto) {
+            alert("Concepto es obligatorio")
+            return
+        }
+        if (!op.monto) {
+            alert("Ingresar monto mayor que 0")
+            return
+        }
+        if (!op.fecha) {
+            alert("Ingresar fecha de la operación")
+            return
+        }
+        if (!op.tipo) {
+            alert("Ingresar tipo de operación")
+            return
+        }
 
-        ///////////
-
-        /*   const { fname, lname, email } = this.state;
-  
-          axios.post('/', { fname, lname, email }) */
-        ////////////
-        const { concepto, monto, fecha, tipo } = op
-        console.log(concepto, monto, fecha, tipo)
         axios({
             "method": "POST",
             "url": "http://localhost:4000/operate",
@@ -38,13 +46,19 @@ const NewOp = () => {
         })
             .then((response) => {
                 console.log("exito")
+                setOp({
+                    concepto: "",
+                    monto: 0,
+                    fecha: "",
+                    tipo: ""
+                })
+
             })
             .catch((error) => {
-                console.log(error)
+                console.log("CATCH = ", error.response)
             });
 
     }
-    console.log(op)
 
     return (
         <>
@@ -68,6 +82,8 @@ const NewOp = () => {
                             name="monto"
                             value={op.monto}
                             onChange={handleChange}
+                            min="1" max="99999999.99"
+                            step="0.01"
                         /><label>Monto</label>
                     </div>
                     <div>
@@ -85,6 +101,7 @@ const NewOp = () => {
                             type="radio"
                             name="tipo"
                             value="ingreso"
+                            checked={op.tipo === "ingreso" ? true : false}
                             onChange={handleChange}
                         />
                         <label>Ingreso</label>
@@ -95,7 +112,7 @@ const NewOp = () => {
                             type="radio"
                             name="tipo"
                             value="gasto"
-
+                            checked={op.tipo === "gasto" ? true : false}
                             onChange={handleChange}
                         />
                         <label >Gasto</label>
